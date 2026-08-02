@@ -73,12 +73,26 @@ Get automatic updates and easy installation by downloading the app directly from
 ## License
 
 The paid desktop application is proprietary and closed-source software. Its
-source repository is private. FFmpeg is bundled as a separately licensed,
-replaceable third-party sidecar under GNU GPL version 3 or later. The source
-workspace includes the full license, binary traceability, and an explicit
-release blocker: the sidecars must not be distributed until complete
-Corresponding Source for each static build is persistently available to
-recipients.
+source repository is private. The intended FFmpeg release profile is a
+separately licensed, replaceable GNU LGPL v3 sidecar; it must be built without
+`--enable-gpl`, `--enable-nonfree`, `libx264`, `libx265`, `libxvid`, and other
+GPL-only FFmpeg dependencies. `--enable-version3` is required for the included
+`libvmaf` local video-quality analysis filter. The release configuration must
+include `--enable-version3 --enable-libvmaf`.
+Media Studio MP4 re-encodes explicitly use native `mpeg4` video and LGPL
+`libmp3lame` audio rather than H.264/H.265 defaults. The checked-in Windows
+and Linux sidecars meet the verified LGPL v3 profile; the currently checked-in
+macOS sidecars remain development-only and are never release inputs. The
+release workflow replaces every platform sidecar before Tauri packaging:
+Windows/Linux use checksum-pinned BtbN LGPL assets, while macOS Intel and Apple
+Silicon are built natively in GitHub Actions. The release must still retain the
+exact source, build configuration, and notices for every sidecar.
+
+For local Tauri development and local packaging, `npm run tauri dev` and
+`npm run tauri build` validate the current platform sidecar before they start.
+They never overwrite binaries implicitly. Run `npm run ffmpeg:sync` to install
+the pinned Windows/Linux BtbN LGPL sidecar or a verified macOS GitHub Actions
+artifact, then rerun the Tauri command.
 
 ---
 
