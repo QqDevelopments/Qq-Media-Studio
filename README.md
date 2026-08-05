@@ -82,17 +82,7 @@ include `--enable-version3 --enable-libvmaf`.
 Media Studio MP4 re-encodes explicitly use native `mpeg4` video and LGPL
 `libmp3lame` audio rather than H.264/H.265 defaults. The checked-in Windows,
 Linux, macOS Intel, and macOS Apple Silicon sidecars meet the verified LGPL v3
-profile. The release workflow validates and packages those checked-in sidecars
-before Tauri packaging. The manual sidecar-update workflow uses
-checksum-pinned BtbN LGPL assets for Windows/Linux and native GitHub Actions
-builds for macOS Intel and Apple Silicon. The release must still retain the
-exact source, build configuration, and notices for every sidecar.
-
-For local Tauri development and local packaging, `npm run tauri dev` and
-`npm run tauri build` validate the current platform sidecar before they start.
-They never overwrite binaries implicitly. Run `npm run ffmpeg:sync` to install
-the pinned Windows/Linux BtbN LGPL sidecar or a verified macOS GitHub Actions
-artifact, then rerun the Tauri command.
+profile.
 
 ---
 
