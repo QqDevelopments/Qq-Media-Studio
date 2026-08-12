@@ -13,32 +13,57 @@
 
 ## Overview
 
-The **Qq Media Studio Desktop App** is a fast and native desktop application for Windows, macOS, and Linux. It serves as the central hub for all your media downloads, working seamlessly with our **Browser Extension**.
+The **Qq Media Studio Desktop App** is a native application for Windows,
+macOS, and Linux. It works with the companion browser extension to receive
+media, manage downloads, organize your media library, and run local media
+production tools.
 
-With this app, you can receive media links directly from your browser, manage your download queue, organize your media library, convert files into your preferred formats, and use local production tools for video, audio, capture, and everyday media tasks.
+You can send media from your browser, choose when downloads begin, pause or
+resume active transfers, convert files, and manage longer download queues from
+one desktop application.
 
-**Available on Steam:** [Download Qq Media Studio on Steam](https://store.steampowered.com/app/5045770/Qq_Media_Studio)
+**Available on Steam:** [Download Qq Media Studio on Steam](https://store.steampowered.com/app/5045770/Qq_Media_Studio/)
 
 ---
 
 ## Features
 
-- **Media Library:** Every media link sent from your browser extension is safely stored here. You can easily filter your files by type (video, audio, image, document).
-- **Download Manager:** Take full control of your downloads. Pause, resume, or cancel at any time. Monitor live speeds, progress, and estimated completion times. You can even set a global speed limit.
-- **Format Conversion:** Convert your downloaded audio, video, and image files on the fly. We support a wide range of popular formats including MP3, MP4, WebM, MKV, PNG, WebP, GIF, and more.
-- **Queue Lists:** Create and manage custom download queues. You can instruct your computer to automatically go to sleep or shut down once a long queue finishes downloading.
-- **Customizable Interface:** Choose between Dark and Light themes to suit your style, with 38 bundled interface languages. Media Studio and Media Library navigation use the selected interface language, including user-facing tool labels, descriptions, controls, and action states.
+- **Media Library:** Store and review media sent from the browser extension or
+  added locally. Filter items by type and inspect their metadata.
+- **Download Manager:** Pause, resume, cancel, and monitor downloads with live
+  progress, speed, estimated completion time, and an optional global speed
+  limit.
+- **Format Conversion:** Convert downloaded audio, video, and image files when
+  the required capability is available, including formats such as MP3, MP4,
+  WebM, PNG, WebP, GIF, and more.
+- **Queue Lists:** Create and manage custom download queues. A queue can clear
+  completed items, show notifications, play a sound, close the app, or shut down
+  the computer when its configured finish actions are enabled.
+- **Customizable Interface:** Choose a light or dark theme and use the 38
+  bundled interface languages.
 
 ### Media Studio
 
-The Media Studio workspace groups its name-only tool menu into **Video**, **Audio**, **Capture & Analysis**, and **Workflow** sections; the selected tool's details appear in the workspace panel. Tool labels wrap safely in the compact, keyboard-accessible navigator instead of overflowing into the workspace.
+Media Studio groups local tools into **Video**, **Audio**, **Capture & Analysis**,
+and **Workflow** sections.
 
-- **Video:** Trim clips, change speed, remove silence, create GIF/WebP clips, apply transforms, extract frames, add watermarks or appended videos, burn subtitle files, and compress for sharing.
-- **Audio:** Extract audio, normalize loudness, generate waveform videos, split the first two tracks to WAV, record from a configured device, and play soundboard clips with optional global hotkeys.
-- **Capture & Analysis:** Record the desktop, inspect local media metadata, and extract text from images with Tesseract OCR. The app can guide OCR installation on Windows, macOS, and Linux.
-- **Workflow:** Batch-rename selected local files, save an HTTP/HTTPS page as a local HTML archive, and schedule a Windows shutdown.
+- **Video:** Trim clips, change speed, remove silence, create GIF/WebP clips,
+  apply video filters, extract frames, add watermarks or appended videos, burn
+  subtitles, and compress for sharing.
+- **Audio:** Extract audio, normalize loudness, generate waveform videos, split
+  audio tracks to WAV, and record from a configured device.
+- **Capture & Analysis:** Record the desktop, inspect local media metadata, and
+  extract text from images with Tesseract OCR.
+- **Workflow:** Batch-rename local files, save an HTTP/HTTPS page as a local
+  HTML archive, and schedule a Windows shutdown.
 
-All production operations run locally. The desktop app bundles FFmpeg for media processing; Tesseract is an optional separate OCR dependency.
+The optional page extractor can discover normalized video quality choices for
+supported pages. It is managed separately through **Settings → Add-ons** and
+does not receive browser cookies by default.
+
+All media processing runs locally. Optional tools are managed through
+**Settings → Add-ons** or a compatible system installation; the lightweight
+installer does not bundle every external processing tool.
 
 ---
 
@@ -48,45 +73,46 @@ All production operations run locally. The desktop app bundles FFmpeg for media 
 | --- | --- |
 | **Windows** | Windows 10 / 11 (64-bit) |
 | **macOS** | macOS 10.13+ (Intel or Apple Silicon) |
-| **Linux** | Ubuntu 22.04+ or equivalent (64-bit) |
+| **Linux** | A supported 64-bit desktop distribution |
+
+Some features require their compatible optional Add-on or a supported system
+installation. The application shows the required remedy in **Settings → Add-ons**
+when a tool is unavailable.
 
 ---
 
 ## Installation
 
-Get automatic updates and easy installation by downloading the app directly from Steam:
-[**Get it on Steam**](https://store.steampowered.com/app/5045770/Qq_Media_Studio)
+Download and install the app through Steam:
 
-*(Note: The app comes with all necessary engines bundled. You don't need to install any external tools like FFmpeg.)*
+[**Get Qq Media Studio on Steam**](https://store.steampowered.com/app/5045770/Qq_Media_Studio/)
+
+Optional processing tools are installed separately from **Settings → Add-ons**;
+they are not all included in the core installer.
 
 ---
 
 ## Getting Started
 
-1. Open the **Qq Media Studio Desktop App**.
-2. Install the companion [Browser Extension from the Chrome Web Store](https://chromewebstore.google.com/detail/qq-internet-media-manager/gckclaoheoljhhbdfjakhgdjefnbkkia).
-3. Browse the web, click the extension on a page with media, and send it to your desktop app!
-4. Manage your downloads and conversions right from the desktop interface.
+1. Open **Qq Media Studio**.
+2. Install the companion [**Browser Extension from the Chrome Web Store**](https://chromewebstore.google.com/detail/qq-internet-media-manager/gckclaoheoljhhbdfjakhgdjefnbkkia).
+3. Browse to a page containing media and open the extension's **Media List**.
+4. Use **Send** to add a selected item to the desktop library, or use the
+   desktop **Download** action when you are ready to start the transfer.
+5. Manage downloads, queues, previews, and conversions from the desktop app.
 
 ---
 
 ## License
 
-The paid desktop application is proprietary and closed-source software. Its
-source repository is private. The intended FFmpeg release profile is a
-separately licensed, replaceable GNU LGPL v3 sidecar; it must be built without
-`--enable-gpl`, `--enable-nonfree`, `libx264`, `libx265`, `libxvid`, and other
-GPL-only FFmpeg dependencies. `--enable-version3` is required for the included
-`libvmaf` local video-quality analysis filter. The release configuration must
-include `--enable-version3 --enable-libvmaf`.
-Media Studio MP4 re-encodes explicitly use native `mpeg4` video and LGPL
-`libmp3lame` audio rather than H.264/H.265 defaults. The checked-in Windows,
-Linux, macOS Intel, and macOS Apple Silicon sidecars meet the verified LGPL v3
-profile.
+Qq Media Studio is proprietary and closed-source software. Optional external
+tools and Add-ons are separate replaceable components with their own licenses
+and notices.
 
 ---
 
 ## Contact & Support
 
-If you have any questions, bug reports, or feature requests, feel free to reach out to us:
+For questions, bug reports, or feature requests, contact:
+
 **[qqdevelopments@gmail.com](mailto:qqdevelopments@gmail.com)**
