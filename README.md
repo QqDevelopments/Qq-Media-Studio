@@ -5,6 +5,7 @@
 **Capture, download, edit, and convert media — right on your desktop.**
 
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue.svg)](#installation)
+[![Website](https://img.shields.io/badge/website-qqdevelopments.com-6f42c1.svg)](https://qqdevelopments.com)
 [![Contact](https://img.shields.io/badge/contact-qqdevelopments%40gmail.com-green.svg)](mailto:qqdevelopments@gmail.com)
 
 </div>
@@ -39,13 +40,21 @@ one desktop application.
 - **Queue Lists:** Create and manage custom download queues. A queue can clear
   completed items, show notifications, play a sound, close the app, or shut down
   the computer when its configured finish actions are enabled.
-- **Customizable Interface:** Choose a light or dark theme and use the 38
+- **Wallpaper Studio:** Import and preview local wallpapers, apply static
+  BMP/JPG/PNG images, manage display assignments and playlists, and restore or
+  stop the active wallpaper. Display layouts and live playback depend on the
+  capabilities available on each platform.
+- **Soundboard & Steam Workshop:** Import supported audio, assign global
+  shortcuts, play clips, browse and subscribe to Workshop sounds, and publish or
+  manage your own sound items where Steam integration is available. Some audio
+  preparation requires the FFmpeg Add-on.
+- **Customizable Interface:** Choose a light or dark theme and use the 37
   bundled interface languages.
 
 ### Media Studio
 
-Media Studio groups local tools into **Video**, **Audio**, **Capture & Analysis**,
-and **Workflow** sections.
+Media Studio groups 25 local tools into **Video**, **Audio**, **Capture &
+Analysis**, **Image**, **Document**, **Archive**, and **Workflow** sections.
 
 - **Video:** Trim clips, change speed, remove silence, create GIF/WebP clips,
   apply video filters, extract frames, add watermarks or appended videos, burn
@@ -54,6 +63,12 @@ and **Workflow** sections.
   audio tracks to WAV, and record from a configured device.
 - **Capture & Analysis:** Record the desktop, inspect local media metadata, and
   extract text from images with Tesseract OCR.
+- **Image:** Convert allowlisted raster formats, remove metadata, generate
+  favicons, and stitch images with ImageMagick resource limits.
+- **Document:** Validate and transform PDFs with QPDF and convert approved
+  office-document families with LibreOffice.
+- **Archive:** List, test, create, and safely extract supported archives with
+  7-Zip.
 - **Workflow:** Batch-rename local files, save an HTTP/HTTPS page as a local
   HTML archive, and schedule a Windows shutdown.
 
@@ -95,7 +110,8 @@ they are not all included in the core installer.
 ## Getting Started
 
 1. Open **Qq Media Studio**.
-2. Install the companion [**Browser Extension from the Chrome Web Store**](https://chromewebstore.google.com/detail/qq-internet-media-manager/gckclaoheoljhhbdfjakhgdjefnbkkia).
+2. Install the companion browser extension from the [**Chrome Web Store**](https://chromewebstore.google.com/detail/qq-internet-media-manager/gckclaoheoljhhbdfjakhgdjefnbkkia)
+   or [**Microsoft Edge Add-ons**](https://microsoftedge.microsoft.com/addons/detail/qq-internet-media-manager/hljlaibhcjelengifmdombfjfngcnkhm).
 3. Browse to a page containing media and open the extension's **Media List**.
 4. Use **Send** to add a selected item to the desktop library, or use the
    desktop **Download** action when you are ready to start the transfer.
@@ -116,3 +132,5 @@ and notices.
 For questions, bug reports, or feature requests, contact:
 
 **[qqdevelopments@gmail.com](mailto:qqdevelopments@gmail.com)**
+
+Website: **[qqdevelopments.com](https://qqdevelopments.com)**
